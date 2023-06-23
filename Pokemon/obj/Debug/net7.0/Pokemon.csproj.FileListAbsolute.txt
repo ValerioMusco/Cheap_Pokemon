@@ -1,0 +1,5 @@
+C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.AssemblyReference.cache
+C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfoInputs.cache
+C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfo.cs
+C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CoreCompileInputs.cache
