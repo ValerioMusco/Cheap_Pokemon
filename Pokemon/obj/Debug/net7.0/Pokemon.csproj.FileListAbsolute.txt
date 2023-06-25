@@ -3,3 +3,20 @@ C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemo
 C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfoInputs.cache
 C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfo.cs
 C:\Users\Ugo est nul\Desktop\Prog\C#\POO\Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CoreCompileInputs.cache
+E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.exe
+E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.deps.json
+E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.runtimeconfig.json
+E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.dll
+E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.pdb
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.AssemblyReference.cache
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.GeneratedMSBuildEditorConfig.editorconfig
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfoInputs.cache
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfo.cs
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CoreCompileInputs.cache
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.dll
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\refint\Pokemon.dll
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.pdb
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.genruntimeconfig.cache
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\ref\Pokemon.dll
+E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pastel.dll
+E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CopyComplete

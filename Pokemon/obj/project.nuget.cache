@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "01hVDQ5U+U2xmYnXJneeim92rP5ZMvN7kUyjuYhVuALS/DD0x8K+/OqDafxoxEXKZM/xI5+a9hZe/ADex70LBw==",
+  "dgSpecHash": "l53Faxx2F/IYpJaFSs1hiKq0ItLsr1/LLXP11byIGDJlXN5PDqmdL50aKJnloGjXiVqxRqBDmIKRY/ZK2r9EOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\POO\\Pokemon\\Pokemon\\Pokemon.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ByLea\\.nuget\\packages\\pastel\\4.1.0\\pastel.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

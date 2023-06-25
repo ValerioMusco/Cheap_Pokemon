@@ -1,31 +1,63 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Pastel/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Pastel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Pastel.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Pastel/4.1.0": {
+      "sha512": "2RGTLbvDyhUyZmNIAdyJZkQTr8RJwD/l4vEvFujLRZN2uxJal1AR8STe7rJwrYESO/Waaa20eYhVd4Q3KX+Nxw==",
+      "type": "package",
+      "path": "pastel/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net462/Pastel.dll",
+        "lib/net462/Pastel.xml",
+        "lib/net6.0/Pastel.dll",
+        "lib/net6.0/Pastel.xml",
+        "lib/net7.0/Pastel.dll",
+        "lib/net7.0/Pastel.xml",
+        "pastel.4.1.0.nupkg.sha512",
+        "pastel.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Pastel >= 4.1.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Ugo est nul\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ByLea\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\POO\\Pokemon\\Pokemon\\Pokemon.csproj",
+      "projectUniqueName": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
       "projectName": "Pokemon",
-      "projectPath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\POO\\Pokemon\\Pokemon\\Pokemon.csproj",
-      "packagesPath": "C:\\Users\\Ugo est nul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\POO\\Pokemon\\Pokemon\\obj\\",
+      "projectPath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+      "packagesPath": "C:\\Users\\ByLea\\.nuget\\packages\\",
+      "outputPath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ugo est nul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ByLea\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +65,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -51,6 +82,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Pastel": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
