@@ -1,4 +1,5 @@
 ﻿using Pokemon.Enums;
+using Pokemon.Exceptions;
 using System.Text;
 
 namespace Pokemon.Models {
@@ -12,10 +13,11 @@ namespace Pokemon.Models {
         private Natures Nature { get; set; }
         private int Level { get; set; }
 
+
         #region Stat Attributes
 
         public int CurrentHp { get; set; }
-        private int MaxHp { get; set; }
+        public int MaxHp { get; set; }
         private int Atk { get; set; }
         private int Def { get; set; }
         private int AtkSpe { get; set; }
@@ -84,8 +86,19 @@ namespace Pokemon.Models {
         }
 
         public void Attack(Pokemons p) {
+            var modifier = GetRelation( Types, p.Types ) switch {
+                Relation.Weakness => 2,
+                Relation.Resistance => 0.5,
+                Relation.Neutral => 1,
+                _ => throw new CombatModifierException( "Problème lors du calcul de faiblesse" ),
+            };
+            Console.WriteLine( $"{Name} utilise Charge !" );
+            if( modifier == 2 )
+                Console.WriteLine( "C'est super efficace !" );
+            if( modifier == 0.5 )
+                Console.WriteLine( "Ce n'est pas très efficace..." );
 
-            p.TakeDamage((Atk - p.Def) < 1 ? 1 : Atk - p.Def);
+            p.TakeDamage( (int)Math.Round( ( ( ( ( ( Level * 2d / 5d + 2d ) * 50d * ( (double)Atk / (double)p.Def ) ) / 50d ) + 2d ) * modifier ) ) );
         }
 
         private void TakeDamage(int damage) {
@@ -110,6 +123,59 @@ namespace Pokemon.Models {
             sb.AppendLine($"Size : {Size} m | Weight = {Weight} kg");
 
             return sb.ToString();
+        }
+        public static Relation GetRelation(List<Types> attacker, List<Types> defender) {
+
+            Dictionary<Types, List<Types>> weaknesses = new()
+            {
+                { Enums.Types.Normal, new List<Types> { Enums.Types.Fighting } },
+                { Enums.Types.Fire, new List<Types> { Enums.Types.Water, Enums.Types.Rock, Enums.Types.Dragon } },
+                { Enums.Types.Water, new List<Types> { Enums.Types.Grass, Enums.Types.Electric } },
+                { Enums.Types.Grass, new List<Types> { Enums.Types.Fire, Enums.Types.Bug, Enums.Types.Poison } },
+                { Enums.Types.Electric, new List<Types> { Enums.Types.Water, Enums.Types.Flying } },
+                { Enums.Types.Ice, new List<Types> { Enums.Types.Grass, Enums.Types.Ground, Enums.Types.Flying, Enums.Types.Dragon } },
+                { Enums.Types.Fighting, new List<Types> { Enums.Types.Normal, Enums.Types.Ice, Enums.Types.Rock, Enums.Types.Steel } },
+                { Enums.Types.Flying, new List<Types> { Enums.Types.Grass, Enums.Types.Fighting, Enums.Types.Bug } },
+                { Enums.Types.Poison, new List<Types> { Enums.Types.Grass } },
+                { Enums.Types.Ground, new List<Types> { Enums.Types.Fire, Enums.Types.Electric, Enums.Types.Poison, Enums.Types.Rock } },
+                { Enums.Types.Rock, new List<Types> { Enums.Types.Fire, Enums.Types.Ice, Enums.Types.Flying, Enums.Types.Bug } },
+                { Enums.Types.Bug, new List<Types> { Enums.Types.Grass, Enums.Types.Psychic } },
+                { Enums.Types.Ghost, new List<Types> { Enums.Types.Ghost, Enums.Types.Psychic } },
+                { Enums.Types.Steel, new List<Types> { Enums.Types.Normal, Enums.Types.Grass, Enums.Types.Fighting, Enums.Types.Bug, Enums.Types.Psychic, Enums.Types.Rock, Enums.Types.Ice, Enums.Types.Dragon, Enums.Types.Fairy } },
+                { Enums.Types.Psychic, new List<Types> { Enums.Types.Fighting, Enums.Types.Poison } },
+                { Enums.Types.Dragon, new List<Types> { Enums.Types.Dragon } },
+                { Enums.Types.Fairy, new List<Types> { Enums.Types.Fighting, Enums.Types.Dragon } }
+            };
+
+            Dictionary<Types, List<Types>> resistances = new()
+            {
+                { Enums.Types.Normal, new List<Types> { } },
+                { Enums.Types.Fire, new List<Types> { Enums.Types.Fire, Enums.Types.Grass, Enums.Types.Ice, Enums.Types.Bug, Enums.Types.Steel, Enums.Types.Fairy } },
+                { Enums.Types.Water, new List<Types> { Enums.Types.Water, Enums.Types.Dragon, Enums.Types.Grass } },
+                { Enums.Types.Grass, new List<Types> { Enums.Types.Water, Enums.Types.Electric, Enums.Types.Grass, Enums.Types.Ground } },
+                { Enums.Types.Electric, new List<Types> { Enums.Types.Flying, Enums.Types.Electric } },
+                { Enums.Types.Ice, new List<Types> { Enums.Types.Ice } },
+                { Enums.Types.Fighting, new List<Types> { Enums.Types.Bug, Enums.Types.Rock, Enums.Types.Normal, Enums.Types.Ice } },
+                { Enums.Types.Flying, new List<Types> { Enums.Types.Grass, Enums.Types.Fighting, Enums.Types.Bug } },
+                { Enums.Types.Poison, new List<Types> { Enums.Types.Poison, Enums.Types.Ground, Enums.Types.Rock, Enums.Types.Bug } },
+                { Enums.Types.Ground, new List<Types> { Enums.Types.Poison, Enums.Types.Rock } },
+                { Enums.Types.Rock, new List<Types> { Enums.Types.Normal, Enums.Types.Flying, Enums.Types.Fire, Enums.Types.Poison } },
+                { Enums.Types.Bug, new List<Types> { Enums.Types.Steel, Enums.Types.Fighting, Enums.Types.Grass, Enums.Types.Poison, Enums.Types.Psychic, Enums.Types.Flying } },
+                { Enums.Types.Ghost, new List<Types> { Enums.Types.Bug, Enums.Types.Steel, Enums.Types.Ghost, Enums.Types.Poison } },
+                { Enums.Types.Steel, new List<Types> { Enums.Types.Psychic, Enums.Types.Bug, Enums.Types.Poison, Enums.Types.Rock, Enums.Types.Fighting, Enums.Types.Grass, Enums.Types.Normal, Enums.Types.Flying, Enums.Types.Ground, Enums.Types.Ice, Enums.Types.Fairy } },
+                { Enums.Types.Psychic, new List<Types> { Enums.Types.Fighting, Enums.Types.Poison } },
+                { Enums.Types.Dragon, new List<Types> { Enums.Types.Steel } },
+                { Enums.Types.Fairy, new List<Types> { Enums.Types.Fighting, Enums.Types.Dragon } }
+            };
+
+            foreach( Types attackerType in attacker ) 
+                foreach( Types defenderType in defender ) 
+                    if( weaknesses.ContainsKey( defenderType ) && weaknesses[defenderType].Contains( attackerType ) )
+                        return Relation.Weakness;
+                    else if( resistances.ContainsKey( defenderType ) && resistances[defenderType].Contains( attackerType ) ) 
+                        return Relation.Resistance;
+                    
+            return Relation.Neutral;
         }
     }
 }
