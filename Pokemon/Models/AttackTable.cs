@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 namespace Pokemon.Models {
     public static class AttackTable {
 
-        public static Dictionary<string, List<string>> movesDictionary = new Dictionary<string, List<string>>()
-        {
+        public static readonly Dictionary<string, List<string>> movesDictionary = new() {
             {"Abime", new List<string>{"--", "None", "Normal", "10", "Met K.O. l'adversaire d'un coup, mais a peu de chances de toucher."}},
             {"Acidarmure", new List<string>{"--", "DefUp", "Poison", "20", "Augmente la Défense du lanceur."}},
             {"Acide", new List<string>{"40", "DefSpeDown", "Poison", "30", "Inflige des dégâts. Baisse la Défense Spéciale de l'adversaire."}},
             {"Affutage", new List<string>{"--", "AtkUp", "Normal", "30", "Augmente l'Attaque du lanceur."}},
             {"Amnesie", new List<string>{"--", "DefSpeUp", "Psychic", "20", "Augmente la Défense Spéciale du lanceur."}},
             {"Armure", new List<string>{"--", "DefUp", "Normal", "30", "Augmente la Défense du lanceur."}},
-            {"Balayage", new List<string>{"25", "None", "Fighting", "20", "Inflige des dégâts. Toujours touche l'adversaire."}},
+            {"Balayage", new List<string>{"25", "None", "Fighting", "20", "Inflige des dégâts. Touche toujours l'adversaire."}},
             {"BecVrille", new List<string>{"80", "Confusion", "Normal", "20", "Inflige des dégâts. Peut rendre confus l'adversaire."}},
             {"Belier", new List<string>{"90", "None", "Normal", "20", "Inflige des dégâts. Blesse aussi l'utilisateur."}},
             {"Berceuse", new List<string>{"--", "Asleep", "Normal", "15", "Endort l'adversaire."}},
@@ -71,7 +70,7 @@ namespace Pokemon.Models {
             {"Explosion", new List<string>{"250", "None", "Normal", "5", "Inflige des dégâts. Blesse aussi l'utilisateur."}},
             {"FatalFoudre", new List<string>{"110", "Paralysed", "Electric", "10", "Inflige des dégâts. Peut paralyser l'adversaire."}},
             {"Flammeche", new List<string>{"40", "Burn", "Fire", "25", "Inflige des dégâts. Brûle l'adversaire."}},
-            {"Flash", new List<string>{"--", "AccDown", "Normal", "20", "Réduit la Précision de l'adversaire."}},
+            {"Flash", new List<string>{"--", "AccuracyDown", "Normal", "20", "Réduit la Précision de l'adversaire."}},
             {"Force", new List<string>{"80", "None", "Normal", "15", "Inflige des dégâts."}},
             {"ForcePoing", new List<string>{"150", "None", "Fighting", "5", "Inflige des dégâts."}},
             {"FouetLianes", new List<string>{"45", "None", "Grass", "25", "Inflige des dégâts."}},
@@ -82,7 +81,7 @@ namespace Pokemon.Models {
             {"Griffe", new List<string>{"40", "None", "Normal", "35", "Inflige des dégâts."}},
             {"Grincement", new List<string>{"--", "DefDown", "Normal", "40", "Baisse la Défense de l'adversaire."}},
             {"Grobisou", new List<string>{"--", "Asleep", "Normal", "10", "Endort l'adversaire."}},
-            {"GrozYeux", new List<string>{"--", "AccDown", "Normal", "30", "Baisse la Précision de l'adversaire."}},
+            {"GrozYeux", new List<string>{"--", "AccuracyDown", "Normal", "30", "Baisse la Précision de l'adversaire."}},
             {"Guillotine", new List<string>{"--", "None", "Normal", "5", "Met K.O. l'adversaire d'un coup, mais a peu de chances de toucher."}},
             {"Hate", new List<string>{"--", "None", "Normal", "20", "Augmente la Vitesse du lanceur."}},
             {"Hurlement", new List<string>{"--", "None", "Normal", "20", "Force l'adversaire à être remplacé par un autre Pokémon."}},
@@ -105,7 +104,7 @@ namespace Pokemon.Models {
             {"MegaSangsue", new List<string>{"40", "None", "Grass", "15", "Inflige des dégâts. Restaure les PV du lanceur à hauteur de la moitié des dégâts infligés."}},
             {"Meteores", new List<string>{"60", "None", "Psychic", "20", "Inflige des dégâts."}},
             {"Metronome", new List<string>{"--", "None", "Normal", "10", "Utilise une attaque au hasard parmi toutes les attaques connues."}},
-            {"MimiQueue", new List<string>{"--", "AccDown", "Normal", "30", "Baisse la Précision de l'adversaire."}},
+            {"MimiQueue", new List<string>{"--", "AccuracyDown", "Normal", "30", "Baisse la Précision de l'adversaire."}},
             {"Mimique", new List<string>{"--", "None", "Normal", "10", "Copie la dernière attaque utilisée par l'adversaire."}},
             {"Morphing", new List<string>{"--", "None", "Normal", "10", "Modifie le type du lanceur pour correspondre à la première attaque de l'adversaire."}},
             {"Morsure", new List<string>{"60", "Flinch", "Dark", "25", "Inflige des dégâts. Peut faire flancher l'adversaire."}},
@@ -168,7 +167,7 @@ namespace Pokemon.Models {
             {"UltraSon", new List<string>{"20", "None", "Normal", "20", "Inflige des dégâts. Peut empêcher l'adversaire d'attaquer pendant quelques tours."}},
             {"Uppercut", new List<string>{"70", "None", "Fighting", "20", "Inflige des dégâts."}},
             {"VaguePsy", new List<string>{"90", "None", "Psychic", "10", "Inflige des dégâts."}},
-            {"Vampigraine", new List<string>{"--", "LeechSeed", "Grass", "10", "Plante des graines sur l'adversaire. Le lanceur récupère des PV à chaque tour."}},
+            {"Vampigraine", new List<string>{"--", "None", "Grass", "10", "Plante des graines sur l'adversaire. Le lanceur récupère des PV à chaque tour."}},
             {"Vampirisme", new List<string>{"20", "None", "Normal", "15", "Inflige des dégâts. Le lanceur récupère des PV à hauteur de la moitié des dégâts infligés."}},
             {"VivaAttaque", new List<string>{"70", "None", "Normal", "20", "Inflige des dégâts."}},
             {"Vol", new List<string>{"90", "None", "Flying", "15", "Inflige des dégâts. Le lanceur s'envole et attaque au tour suivant."}},

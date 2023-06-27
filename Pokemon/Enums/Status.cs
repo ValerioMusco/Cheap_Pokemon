@@ -11,7 +11,7 @@ namespace Pokemon.Enums {
         Paralysed,
         Asleep,
         Frozen,
-        Ablaze,
+        Burn,
         Poisonned,
         Confusion,
         AtkUp,

@@ -1,19 +1,25 @@
 ﻿using Pokemon.Enums;
 using Pokemon.Exceptions;
 using System.Text;
+using Pokemon.Models;
+using static Pokemon.Models.Attacks;
 
 namespace Pokemon.Models {
     public class Pokemons {
 
+        #region Variable
+
         private readonly Random random = new();
         public string Name { get; set; }
-        private List<Types> Types { get; set; }
+        public List<Types> Types { get; set; }
         private List<Status> Status { get; set; }
+        private List<Attacks> Attacks { get; set; }
         private double Size { get; set; }
         private double Weight { get; set; }
         private Natures Nature { get; set; }
         private int Level { get; set; }
 
+        #endregion
 
         #region Stat Attributes
 
@@ -49,8 +55,7 @@ namespace Pokemon.Models {
             Types = types;
             Size = size;
             Weight = weight;
-            Status = new();
-            Status.Add( Enums.Status.None );
+            Status = new() { Enums.Status.None };
 
             MaxHp = GenereateHP( baseStats["hp"], HpIV, Level );
             CurrentHp = MaxHp;
@@ -60,6 +65,8 @@ namespace Pokemon.Models {
             DefSpe = GenereateStat( baseStats["defspe"], DefSpeIV, Level );
             Speed = GenereateStat( baseStats["speed"], SpeedIV, Level );
             Special = GenereateStat( baseStats["special"], SpecialIV, Level );
+
+            Attacks = GenerateAttack( this );
         }
 
         private void GenerateIVs() {
@@ -89,13 +96,17 @@ namespace Pokemon.Models {
         }
 
         public void Attack(Pokemons p) {
-            var modifier = GetRelation( Types, p.Types ) switch {
+
+            Random r = new();
+            int attack = r.Next(3);
+            Attacks[attack].CurrentPp--;
+            double modifier = GetRelation( Attacks[attack], p.Types ) switch {
                 Relation.Weakness => 2,
                 Relation.Resistance => 0.5,
                 Relation.Neutral => 1,
                 _ => throw new CombatModifierException( "Problème lors du calcul de faiblesse" ),
             };
-            Console.WriteLine( $"{Name} utilise Charge !" );
+            Console.WriteLine( $"{Name} utilise {Attacks[attack].GetAttackName()} !" );
             if( modifier == 2 )
                 Console.WriteLine( "C'est super efficace !" );
             if( modifier == 0.5 )
@@ -124,10 +135,13 @@ namespace Pokemon.Models {
                 sb.Append( $"{Enum.GetName(typeof(Types), type)} " );
             sb.AppendLine();
             sb.AppendLine($"Size : {Size} m | Weight = {Weight} kg");
+            sb.AppendLine();
+            foreach( Attacks attack in Attacks )
+                sb.AppendLine( $"{attack}" );
 
             return sb.ToString();
         }
-        public static Relation GetRelation(List<Types> attacker, List<Types> defender) {
+        public static Relation GetRelation(Attacks attack, List<Types> defender) {
 
             Dictionary<Types, List<Types>> weaknesses = new()
             {
@@ -171,12 +185,11 @@ namespace Pokemon.Models {
                 { Enums.Types.Fairy, new List<Types> { Enums.Types.Fighting, Enums.Types.Dragon } }
             };
 
-            foreach( Types attackerType in attacker ) 
-                foreach( Types defenderType in defender ) 
-                    if( weaknesses.ContainsKey( defenderType ) && weaknesses[defenderType].Contains( attackerType ) )
-                        return Relation.Weakness;
-                    else if( resistances.ContainsKey( defenderType ) && resistances[defenderType].Contains( attackerType ) ) 
-                        return Relation.Resistance;
+            foreach( Types defenderType in defender ) 
+                if( weaknesses.ContainsKey( defenderType ) && weaknesses[defenderType].Contains( attack.Type ) )
+                    return Relation.Weakness;
+                else if( resistances.ContainsKey( defenderType ) && resistances[defenderType].Contains( attack.Type ) ) 
+                    return Relation.Resistance;
                     
             return Relation.Neutral;
         }
