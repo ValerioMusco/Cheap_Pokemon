@@ -71,7 +71,7 @@ namespace Pokemon.Models {
 
             for(int i = 0; i < 4; i++ ) {
 
-                int index = r.Next(validAttacks.Count);
+                int index = r.Next(validAttacks.Count - 1);
                 chosenAttacks.Add( validAttacks[ index ]);
                 validAttacks.Remove( validAttacks[ index] );
             }

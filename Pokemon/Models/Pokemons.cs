@@ -99,7 +99,9 @@ namespace Pokemon.Models {
 
             Random r = new();
             int attack = r.Next(3);
+
             Attacks[attack].CurrentPp--;
+
             double modifier = GetRelation( Attacks[attack], p.Types ) switch {
                 Relation.Weakness => 2,
                 Relation.Resistance => 0.5,

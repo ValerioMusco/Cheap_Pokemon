@@ -15,7 +15,7 @@ namespace Pokemon.Models {
             {"Amnesie", new List<string>{"--", "DefSpeUp", "Psychic", "20", "Augmente la Défense Spéciale du lanceur."}},
             {"Armure", new List<string>{"--", "DefUp", "Normal", "30", "Augmente la Défense du lanceur."}},
             {"Balayage", new List<string>{"25", "None", "Fighting", "20", "Inflige des dégâts. Touche toujours l'adversaire."}},
-            {"BecVrille", new List<string>{"80", "Confusion", "Normal", "20", "Inflige des dégâts. Peut rendre confus l'adversaire."}},
+            {"BecVrille", new List<string>{"80", "Confused", "Normal", "20", "Inflige des dégâts. Peut rendre confus l'adversaire."}},
             {"Belier", new List<string>{"90", "None", "Normal", "20", "Inflige des dégâts. Blesse aussi l'utilisateur."}},
             {"Berceuse", new List<string>{"--", "Asleep", "Normal", "15", "Endort l'adversaire."}},
             {"Blizzard", new List<string>{"110", "Frozen", "Ice", "5", "Inflige des dégâts. Peut geler l'adversaire."}},
@@ -173,6 +173,10 @@ namespace Pokemon.Models {
             {"Vol", new List<string>{"90", "None", "Flying", "15", "Inflige des dégâts. Le lanceur s'envole et attaque au tour suivant."}},
             {"VoleVie", new List<string>{"20", "None", "Grass", "25", "Inflige des dégâts. Le lanceur récupère des PV à hauteur de la moitié des dégâts infligés."}},
             {"Yoga", new List<string>{"0", "None", "Psychic", "40", "Augmente l'Attaque Spéciale du lanceur."}},
+            { "Crocs Givrants", new List<string> { "65", "Frozen", "Dragon", "15", "Peut geler l'adversaire." } },
+            { "Draco Météore", new List<string> { "130", "DefSpeDown", "Dragon", "5", "Inflige des dégâts et réduit la statistique de Défense Spéciale de l'utilisateur." } },
+            { "Danse Draco", new List<string> { "--", "AtkUp", "Dragon", "20", "Augmente l'Attaque et la Vitesse de l'utilisateur." } },
+            { "Dracocharge", new List<string> { "85", "Paralysed", "Dragon", "10", "Peut paralyser l'adversaire." } }
         };
     }
 }

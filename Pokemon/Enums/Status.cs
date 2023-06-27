@@ -13,7 +13,7 @@ namespace Pokemon.Enums {
         Frozen,
         Burn,
         Poisonned,
-        Confusion,
+        Confused,
         AtkUp,
         AtkSpeUp,
         DefUp,

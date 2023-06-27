@@ -1,8 +1,9 @@
 ﻿using Pokemon.Enums;
 using Pokemon.Exceptions;
 using Pokemon.Models;
+using Pokemon.PokemonModels;
 
-Pokemons poke1 = PokemonTable.GeneratePokemon( "Dracolosse", 100 );
+Pokemons poke1 = PokemonTable.GeneratePokemon( "minidraco", 100 );
 Pokemons poke2 = PokemonTable.GeneratePokemon( "Goupix", 100 );
 
 Console.WriteLine( $"{poke1.Name} HP : {poke1.CurrentHp} / {poke1.MaxHp}" );
@@ -13,8 +14,10 @@ while( poke1.CurrentHp > 0 && poke2.CurrentHp > 0 ) {
 
     try { poke1.Attack( poke2 ); }
     catch( CombatModifierException e ) { Console.WriteLine( e.Message ); }
-    try { poke2.Attack( poke1 ); }
-    catch( CombatModifierException e ) { Console.WriteLine( e.Message ); }
+    if( poke2.CurrentHp > 0 ) {
+        try { poke2.Attack( poke1 ); }
+        catch( CombatModifierException e ) { Console.WriteLine( e.Message ); }
+    }
     Console.WriteLine();
 
     Console.WriteLine( $"{poke1.Name} HP : {poke1.CurrentHp} / {poke1.MaxHp}" );
