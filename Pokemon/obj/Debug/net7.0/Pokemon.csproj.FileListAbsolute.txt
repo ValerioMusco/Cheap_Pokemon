@@ -20,3 +20,20 @@ E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.genruntimeconfig.cac
 E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\ref\Pokemon.dll
 E:\Progra\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pastel.dll
 E:\Progra\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CopyComplete
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.exe
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.deps.json
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.runtimeconfig.json
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.dll
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pokemon.pdb
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\bin\Debug\net7.0\Pastel.dll
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.AssemblyReference.cache
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfoInputs.cache
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.AssemblyInfo.cs
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CoreCompileInputs.cache
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.csproj.CopyComplete
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.dll
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\refint\Pokemon.dll
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.pdb
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\Pokemon.genruntimeconfig.cache
+C:\Users\Ugo est nul\Desktop\Prog\C#\Cheap_Pokemon\Pokemon\obj\Debug\net7.0\ref\Pokemon.dll

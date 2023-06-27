@@ -8,6 +8,7 @@ namespace Pokemon.Models {
         private readonly Random random = new();
         public string Name { get; set; }
         private List<Types> Types { get; set; }
+        private List<Status> Status { get; set; }
         private double Size { get; set; }
         private double Weight { get; set; }
         private Natures Nature { get; set; }
@@ -48,6 +49,8 @@ namespace Pokemon.Models {
             Types = types;
             Size = size;
             Weight = weight;
+            Status = new();
+            Status.Add( Enums.Status.None );
 
             MaxHp = GenereateHP( baseStats["hp"], HpIV, Level );
             CurrentHp = MaxHp;

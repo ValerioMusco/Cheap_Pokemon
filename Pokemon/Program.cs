@@ -2,8 +2,8 @@
 using Pokemon.Exceptions;
 using Pokemon.Models;
 
-Pokemons poke1 = PokemonTable.GeneratePokemon( "Bulbizarre", 100 );
-Pokemons poke2 = PokemonTable.GeneratePokemon( "Carapuce", 100 );
+Pokemons poke1 = PokemonTable.GeneratePokemon( "rattata", 100 );
+Pokemons poke2 = PokemonTable.GeneratePokemon( "rattata", 100 );
 
 Console.WriteLine( $"{poke1.Name} HP : {poke1.CurrentHp} / {poke1.MaxHp}" );
 Console.WriteLine( $"{poke2.Name} HP : {poke2.CurrentHp} / {poke2.MaxHp}" );

@@ -45,19 +45,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ByLea\\.nuget\\packages\\": {}
+    "C:\\Users\\Ugo est nul\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+      "projectUniqueName": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
       "projectName": "Pokemon",
-      "projectPath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
-      "packagesPath": "C:\\Users\\ByLea\\.nuget\\packages\\",
-      "outputPath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\obj\\",
+      "projectPath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+      "packagesPath": "C:\\Users\\Ugo est nul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ByLea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ugo est nul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -65,6 +70,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
