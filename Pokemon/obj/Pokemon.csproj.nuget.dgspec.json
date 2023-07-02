@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj": {}
+    "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj": {
+    "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+        "projectUniqueName": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
         "projectName": "Pokemon",
-        "projectPath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
-        "packagesPath": "C:\\Users\\Ugo est nul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\obj\\",
+        "projectPath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+        "packagesPath": "C:\\Users\\ByLea\\.nuget\\packages\\",
+        "outputPath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ugo est nul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ByLea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +45,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "MonoGame.Framework.DesktopGL": {
+              "target": "Package",
+              "version": "[3.8.1.303, )"
+            },
             "Pastel": {
               "target": "Package",
               "version": "[4.1.0, )"

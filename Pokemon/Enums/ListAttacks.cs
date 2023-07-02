@@ -172,7 +172,7 @@ namespace Pokemon.Enums {
         VaguePsy,
         Vampigraine,
         Vampirisme,
-        VivaAttaque,
+        ViveAttaque,
         Vol,
         VoleVie,
         Yoga

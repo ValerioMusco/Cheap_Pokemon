@@ -61,7 +61,7 @@
         Caninos,
         Arcanin,
         Ptitard,
-        Têtarte,
+        Tetarte,
         Tartard,
         Abra,
         Kadabra,

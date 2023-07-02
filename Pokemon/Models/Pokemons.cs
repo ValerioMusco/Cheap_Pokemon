@@ -11,13 +11,13 @@ namespace Pokemon.Models {
 
         private readonly Random random = new();
         public string Name { get; set; }
+        public int Level { get; set; }
         public List<Types> Types { get; set; }
         private List<Status> Status { get; set; }
-        private List<Attacks> Attacks { get; set; }
+        public List<Attacks> Attacks { get; set; }
         private double Size { get; set; }
         private double Weight { get; set; }
         private Natures Nature { get; set; }
-        private int Level { get; set; }
 
         #endregion
 
@@ -71,23 +71,23 @@ namespace Pokemon.Models {
 
         private void GenerateIVs() {
 
-            HpIV = random.Next( 0, 32 );
-            AtkIV = random.Next( 0, 32 );
-            DefIV = random.Next( 0, 32 );
-            AtkSpeIV = random.Next( 0, 32 );
-            DefSpeIV = random.Next( 0, 32 );
-            SpeedIV = random.Next( 0, 32 );
-            SpecialIV = random.Next( 0, 32 );
+            HpIV = random.Next( 32 );
+            AtkIV = random.Next( 32 );
+            DefIV = random.Next( 32 );
+            AtkSpeIV = random.Next( 32 );
+            DefSpeIV = random.Next( 32 );
+            SpeedIV = random.Next( 32 );
+            SpecialIV = random.Next( 32 );
         }
 
         private static int GenereateHP(int baseHp, int iv, int level) {
 
-            return ( ( ( ( baseHp + iv ) * 2 ) * level ) / 100 ) + 5 + 10;
+            return (int)( ( ( 2 * baseHp + iv ) * level ) / 100f ) + level + 10;
         }
 
         private static int GenereateStat(int baseStat, int iv, int level) {
 
-            return ( ( ( baseStat + iv ) * 2 ) * level ) / 100 + level;
+            return (int)( ( 2 * baseStat + iv ) * level ) / 100 + 5;
         }
 
         private void GenerateNature() {
@@ -98,7 +98,7 @@ namespace Pokemon.Models {
         public void Attack(Pokemons p) {
 
             Random r = new();
-            int attack = r.Next(3);
+            int attack = r.Next(Attacks.Count);
 
             Attacks[attack].CurrentPp--;
 

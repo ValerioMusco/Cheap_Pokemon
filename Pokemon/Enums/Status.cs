@@ -25,6 +25,7 @@ namespace Pokemon.Enums {
         DefDown,
         DefSpeDown,
         SpeedDown,
-        AccuracyDown
+        AccuracyDown,
+        Flinch
     }
 }
