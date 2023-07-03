@@ -151,6 +151,7 @@
         Draco,
         Dracolosse,
         Mewtwo,
-        Mew
+        Mew,
+        Mamadot
     }
 }

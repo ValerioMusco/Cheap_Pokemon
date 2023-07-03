@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lf68OlgDV4A5qkVeR58ImahmC+10vYZ9IIp+DPXXH4oEolsl7wf+HYTZeIM6P+amwiAJGmQHLFTC+JMdmpnbjg==",
+  "dgSpecHash": "jjuFg8PNUkENegiU0XLWARCQPfVa7uZsbLDo+c075KpYEtG8/0G/IAI9GYegplaE+B7bHFrDyxq8foNRt8E4mQ==",
   "success": true,
-  "projectFilePath": "E:\\Progra\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
+  "projectFilePath": "C:\\Users\\Ugo est nul\\Desktop\\Prog\\C#\\Cheap_Pokemon\\Pokemon\\Pokemon.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ByLea\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\ByLea\\.nuget\\packages\\pastel\\4.1.0\\pastel.4.1.0.nupkg.sha512"
+    "C:\\Users\\Ugo est nul\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Ugo est nul\\.nuget\\packages\\pastel\\4.1.0\\pastel.4.1.0.nupkg.sha512"
   ],
   "logs": []
 }

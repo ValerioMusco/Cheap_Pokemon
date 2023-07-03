@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pokemon.Models;
+using Pokemon.Exceptions;
 
 namespace Pokemon.Models {
     public class Attacks {
@@ -78,20 +79,27 @@ namespace Pokemon.Models {
             //    validAttacks.Remove( validAttacks[ index] );
             //}
             #endregion
+
             List<string> move = new();
             List<Attacks> chosenAttacks = new();
             List<Attacks> validAttacks = new();
             Dictionary<string, string> attacks = PokemonLearnset.GetLearnSet( p.Name );
 
             foreach( KeyValuePair<string, string> kvp in attacks ) {
-                
-                if ( AttackTable.movesDictionary.ContainsKey( kvp.Key ) && int.Parse(kvp.Value) <= p.Level) {
 
-                    AttackTable.movesDictionary.TryGetValue( kvp.Key, out move );
-                    validAttacks.Add( new Attacks( kvp.Key, ( move[0] == "--" ) ? 0 : int.Parse( move[0] ),
-                            Enum.Parse<Types>(move[2]), Enum.Parse<Status>( move[1]),
-                            int.Parse( move[3] ), move[4] ) );
+                try { 
+                    move = AttackTable.getMove( kvp.Key.Replace(" ", "") );
+                    //move = AttackTable.getMove( "TranchHerbe" ); 
+
+                    if ( int.Parse(kvp.Value) <= p.Level) {
+
+                        validAttacks.Add( new Attacks( kvp.Key, ( move[0] == "--" ) ? 0 : int.Parse( move[0] ),
+                                Enum.Parse<Types>(move[2]), Enum.Parse<Status>( move[1]),
+                                int.Parse( move[3] ), move[4] ) );
+                    }
                 }
+                catch ( AttackNotFoundException ex) { Console.WriteLine( ex ); }
+
 
             }
 
