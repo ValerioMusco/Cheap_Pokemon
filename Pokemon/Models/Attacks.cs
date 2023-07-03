@@ -47,7 +47,7 @@ namespace Pokemon.Models {
             return sb.ToString();
         }
 
-        public string GetAttackName() {
+        public string? GetAttackName() {
             return Name;
         }
 
@@ -80,7 +80,7 @@ namespace Pokemon.Models {
             //}
             #endregion
 
-            List<string> move = new();
+            List<string> move;
             List<Attacks> chosenAttacks = new();
             List<Attacks> validAttacks = new();
             Dictionary<string, string> attacks = PokemonLearnset.GetLearnSet( p.Name );
@@ -88,8 +88,7 @@ namespace Pokemon.Models {
             foreach( KeyValuePair<string, string> kvp in attacks ) {
 
                 try { 
-                    move = AttackTable.getMove( kvp.Key.Replace(" ", "") );
-                    //move = AttackTable.getMove( "TranchHerbe" ); 
+                    move = AttackTable.GetMove( kvp.Key.Replace(" ", "") );
 
                     if ( int.Parse(kvp.Value) <= p.Level) {
 

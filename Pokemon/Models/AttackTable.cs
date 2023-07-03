@@ -8,7 +8,7 @@ using Pokemon.Exceptions;
 namespace Pokemon.Models {
     public static class AttackTable {
 
-        public static List<string> getMove( string name ) {
+        public static List<string> GetMove( string name ) {
 
             return name.ToLower() switch {
                 "abime" => new List<string> { "--", "None", "Normal", "10", "Met K.O. l'adversaire d'un coup, mais a peu de chances de toucher." },
